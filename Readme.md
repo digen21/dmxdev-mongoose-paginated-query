@@ -4,7 +4,7 @@ Collecting workspace information
 # NOTE: The package is not complCollecting workspace information
 
 ```markdown
-# NOTE: The package is not completely done yet. You can use this package and ping me if any bugs or enhancements are needed.
+# NOTE: The package is not completely done yet. You can use this package and ping me if any bugs fixing or enhancements are needed.
 ```
 
 Here is a README file for your npm package:
