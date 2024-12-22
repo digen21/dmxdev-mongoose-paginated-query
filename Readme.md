@@ -1,11 +1,12 @@
 Collecting workspace information
 
-```markdown
+````markdown
 # NOTE: The package is not complCollecting workspace information
 
 ```markdown
 # NOTE: The package is not completely done yet. You can use this package and ping me if any bugs fixing or enhancements are needed.
 ```
+````
 
 Here is a README file for your npm package:
 
@@ -29,7 +30,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -37,7 +38,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -135,7 +136,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -192,8 +193,10 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 This README file provides a comprehensive guide on how to use your `mongoosePaginate` function, including installation, usage, and examples.
 ```
+
 etely done yet. You can use this package and ping me if any bugs or enhancements are needed.
-```
+
+`````
 
 Here is a README file for your npm package:
 
@@ -208,8 +211,9 @@ To install the package, run:
 
 ```sh
 npm install mongoosepaginate
-```
-````
+`````
+
+`````
 
 ## Usage
 
@@ -217,7 +221,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -225,7 +229,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -323,7 +327,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -397,7 +401,7 @@ To install the package, run:
 ```sh
 npm install mongoosepaginate
 ```
-````
+`````
 
 ## Usage
 
@@ -405,7 +409,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -413,7 +417,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -511,7 +515,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -568,8 +572,10 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 This README file provides a comprehensive guide on how to use your `mongoosePaginate` function, including installation, usage, and examples.
 ```
+
 etely done yet. You can use this package and ping me if any bugs or enhancements are needed.
-```
+
+`````
 
 Here is a README file for your npm package:
 
@@ -584,8 +590,9 @@ To install the package, run:
 
 ```sh
 npm install mongoosepaginate
-```
-````
+`````
+
+`````
 
 ## Usage
 
@@ -593,7 +600,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -601,7 +608,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -699,7 +706,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -777,7 +784,7 @@ To install the package, run:
 ```sh
 npm install mongoosepaginate
 ```
-````
+`````
 
 ## Usage
 
@@ -785,7 +792,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -793,7 +800,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -891,7 +898,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -948,8 +955,10 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 This README file provides a comprehensive guide on how to use your `mongoosePaginate` function, including installation, usage, and examples.
 ```
+
 etely done yet. You can use this package and ping me if any bugs or enhancements are needed.
-```
+
+`````
 
 Here is a README file for your npm package:
 
@@ -964,8 +973,9 @@ To install the package, run:
 
 ```sh
 npm install mongoosepaginate
-```
-````
+`````
+
+`````
 
 ## Usage
 
@@ -973,7 +983,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -981,7 +991,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -1079,7 +1089,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -1153,7 +1163,7 @@ To install the package, run:
 ```sh
 npm install mongoosepaginate
 ```
-````
+`````
 
 ## Usage
 
@@ -1161,7 +1171,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -1169,7 +1179,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -1267,7 +1277,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -1324,8 +1334,10 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 This README file provides a comprehensive guide on how to use your `mongoosePaginate` function, including installation, usage, and examples.
 ```
+
 etely done yet. You can use this package and ping me if any bugs or enhancements are needed.
-```
+
+`````
 
 Here is a README file for your npm package:
 
@@ -1340,7 +1352,8 @@ To install the package, run:
 
 ```sh
 npm install mongoosepaginate
-```
+`````
+
 ````
 
 ## Usage
@@ -1349,7 +1362,7 @@ npm install mongoosepaginate
 
 First, import the
 
-nest-mongoose-paginate
+@dmxdev/mongoose-paginated-query
 
 function:
 
@@ -1357,7 +1370,7 @@ function:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 ```
 
 ### Defining the Schema
@@ -1455,7 +1468,7 @@ Here is a complete example:
 import mongoosePaginate, {
   PaginationOptions,
   PaginationResult,
-} from 'nest-mongoose-paginate';
+} from '@dmxdev/mongoose-paginated-query';
 import { Schema, model, connect } from 'mongoose';
 
 const userSchema = new Schema({
@@ -1526,3 +1539,4 @@ s project is licensed under the MIT License. See the LICENSE file for details.
 
 This README file provides a comprehensive guide on how to use your `mongoosePaginate` function, including installation, usage, and examples.
 ```
+````
