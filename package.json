@@ -1,5 +1,5 @@
 {
-  "name": "nest-mongoose-paginate",
+  "name": "mongoose-paginate",
   "version": "1.0.0",
   "description": "Mongodb NestJS Paginate Queries Package",
   "main": "index.ts",
