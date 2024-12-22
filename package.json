@@ -1,6 +1,6 @@
 {
   "name": "@dmxdev/mongoose-paginated-query",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Mongodb NestJS Paginate Queries Package",
   "main": "index.ts",
   "types": "dist/index.d.ts",
