@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-paginate",
+  "name": "@dmx/mongoose-paginated-query",
   "version": "1.1.0",
   "description": "Mongodb NestJS Paginate Queries Package",
   "main": "index.ts",
@@ -53,5 +53,11 @@
   "homepage": "https://github.com/digen21/mongoosePaginate/blob/main/Readme.md",
   "dependencies": {
     "mongoose": "^8.9.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/digen21/mongoosePaginate/issues"
   }
 }
