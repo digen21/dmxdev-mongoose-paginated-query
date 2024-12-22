@@ -1,6 +1,6 @@
 {
   "name": "@dmxdev/mongoose-paginated-query",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Mongodb Paginate Queries Package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
