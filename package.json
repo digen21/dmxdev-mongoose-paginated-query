@@ -1,7 +1,7 @@
 {
   "name": "@dmxdev/mongoose-paginated-query",
   "version": "1.2.1",
-  "description": "Mongodb NestJS Paginate Queries Package",
+  "description": "Mongodb Paginate Queries Package",
   "main": "index.ts",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digen21/mongoosePaginate.git"
+    "url": "git+https://github.com/digen21/dmxdev-mongoose-paginated-query.git"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -29,8 +29,8 @@
   ],
   "keywords": [
     "Mongodb",
-    "NestJs",
-    "Paginate"
+    "Paginate",
+    "Typescript"
   ],
   "author": "DMX2104",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.1"
   },
-  "homepage": "https://github.com/digen21/mongoosePaginate/blob/main/Readme.md",
+  "homepage": "https://github.com/digen21/dmxdev-mongoose-paginated-query/blob/main/Readme.md",
   "dependencies": {
     "mongoose": "^8.9.2"
   },
@@ -58,6 +58,6 @@
     "test": "test"
   },
   "bugs": {
-    "url": "https://github.com/digen21/mongoosePaginate/issues"
+    "url": "https://github.com/digen21/dmxdev-mongoose-paginated-query/issues"
   }
 }
