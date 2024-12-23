@@ -1,4 +1,7 @@
-import mongoosePaginate, { PaginationOptions, PaginationResult } from "../src";
+import mongoosePaginate, {
+  PaginationOptions,
+  PaginationResult,
+} from '../src/index';
 
 const mockSchema = {
   find: jest.fn().mockReturnThis(),
@@ -11,13 +14,13 @@ const mockSchema = {
   countDocuments: jest.fn().mockReturnThis(),
 };
 
-describe("mongoosePaginate", () => {
+describe('mongoosePaginate', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it("should return paginated results", async () => {
-    const docs = [{ name: "doc1" }, { name: "doc2" }];
+  it('should return paginated results', async () => {
+    const docs = [{ name: 'doc1' }, { name: 'doc2' }];
     const totalDocs = 20;
 
     mockSchema.exec.mockResolvedValueOnce(docs);
@@ -34,7 +37,7 @@ describe("mongoosePaginate", () => {
     const result: PaginationResult<(typeof docs)[0]> = await mongoosePaginate(
       mockSchema as any,
       options,
-      query
+      query,
     );
 
     expect(mockSchema.find).toHaveBeenCalledWith(query);
@@ -56,8 +59,8 @@ describe("mongoosePaginate", () => {
     });
   });
 
-  it("should handle custom query", async () => {
-    const docs = [{ name: "doc1" }];
+  it('should handle custom query', async () => {
+    const docs = [{ name: 'doc1' }];
     const totalDocs = 1;
 
     mockSchema.exec.mockResolvedValueOnce(docs);
@@ -70,12 +73,12 @@ describe("mongoosePaginate", () => {
       populate: [],
     };
 
-    const query = { name: "doc1" };
+    const query = { name: 'doc1' };
 
     const result: PaginationResult<(typeof docs)[0]> = await mongoosePaginate(
       mockSchema as any,
       options,
-      query
+      query,
     );
 
     expect(mockSchema.find).toHaveBeenCalledWith(query);
