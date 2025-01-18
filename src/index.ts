@@ -38,7 +38,7 @@ export type PopulateArray = PopulateOptions[];
  * - `PopulateOptions`: An object containing options for population.
  * - `PopulateArray`: An array of paths or options for population.
  */
-export type PopulateInput = string | PopulateOptions | PopulateArray;
+export type PopulateInput = PopulateOptions | PopulateOptions[];
 
 /**
  * Interface representing the options for pagination.
@@ -70,7 +70,21 @@ export interface PaginationOptions {
   page: number;
   limit: number;
   sort?: Record<string, any>;
-  populate?: PopulateInput;
+}
+
+export interface PaginateParams {
+  options: PaginationOptions; // Pagination options
+  query?: Record<string, any>; // Optional query to filter results
+  populate?: PopulateInput; // Optional populate input
+  select?: string; // Optional fields to select
+}
+
+export interface MongoosePaginateParams<T> {
+  schema: Model<T>; // The Mongoose model
+  options: PaginationOptions; // Pagination options
+  query?: Record<string, any>; // Optional query to filter results
+  populate?: PopulateInput; // Optional populate input
+  select?: string; // Optional fields to select
 }
 
 /**
@@ -91,42 +105,63 @@ export interface PaginationOptions {
  * }>} - An object containing the paginated results and pagination information.
  */
 
-const mongoosePaginate = async <T>(
-  schema: Model<T>,
-  options: PaginationOptions,
-  query: Record<string, any> = {},
-): Promise<PaginationResult<T>> => {
-  const { page = 1, limit = 10, sort = {}, populate = [] } = options;
+const mongoosePaginate = async <T>({
+  schema,
+  options,
+  query = {},
+  populate,
+  select,
+}: MongoosePaginateParams<T>): Promise<PaginationResult<T>> => {
+  const { page = 1, limit = 10, sort = {} } = options;
 
   const skip = (page - 1) * limit;
 
-  const normalizedPopulate = Array.isArray(populate) ? populate : [populate];
+  /**
+   * Executes a paginated query on a MongoDB schema using Mongoose.
+   *
+   * @param schema - The Mongoose model/schema to query
+   * @param query - The MongoDB query filter criteria
+   * @param skip - Number of documents to skip
+   * @param limit - Maximum number of documents to return
+   * @param sort - Sort criteria for the query results
+   * @param normalizedPopulate - Population options for referenced documents
+   * @param select - Fields to include/exclude in the query results
+   * @returns Promise containing a tuple of [documents array, total count]
+   * @typeParam T - Type of the documents being queried
+   */
 
-  const [docs, totalDocs] = await Promise.all([
-    schema
-      .find(query)
-      .skip(skip)
-      .limit(limit)
-      .sort(sort)
-      .populate(normalizedPopulate)
-      .lean<T[]>() // This helps TypeScript understand that docs is an array of the correct type, ensuring proper type inference.
-      .exec(),
-    schema.countDocuments(query),
-  ]);
+  try {
+    const [docs, totalDocs] = await Promise.all([
+      schema
+        .find(query) // Find documents matching the query
+        .skip(skip) // Skip the specified number of documents
+        .limit(limit) // Limit the number of documents returned
+        .sort(sort) // Sort the documents
+        .populate(populate!) // Populate referenced documents
+        .select(select!) // Select specific fields
+        .lean<T[]>() // Convert documents to plain JavaScript objects
+        .exec(), // Execute the query
+      schema.countDocuments(query), // Count the total number of documents matching the query
+    ]);
 
-  const totalPages = Math.ceil(totalDocs / limit);
-  const hasNextPage = page < totalPages;
-  const hasPrevPage = page > 1;
+    const totalPages = Math.ceil(totalDocs / limit);
+    const hasNextPage = page < totalPages;
+    const hasPrevPage = page > 1;
 
-  return {
-    docs,
-    totalDocs,
-    limit,
-    page,
-    totalPages,
-    hasNextPage,
-    hasPrevPage,
-  };
+    return {
+      docs,
+      totalDocs,
+      limit,
+      page,
+      totalPages,
+      hasNextPage,
+      hasPrevPage,
+    };
+  } catch (error: unknown) {
+    const errorMessage =
+      error instanceof Error ? error.message : 'Unknown error';
+    throw new Error(`Error during pagination: ${errorMessage}`);
+  }
 };
 
 export default mongoosePaginate;
